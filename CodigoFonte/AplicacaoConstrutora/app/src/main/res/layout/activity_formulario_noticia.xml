@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activitys.FormularioNoticiaActivity">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Texto de descrição da nóticia"
+            android:id="@+id/formulario_noticia_texto"
+            android:inputType="textMultiLine"
+            android:maxLength="2000"
+            android:maxLines="8"
+            android:minLines="4"
+            android:isScrollContainer="true"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Data de hoje"
+            android:id="@+id/formulario_noticia_data"/>
+
+        <Button
+            android:id="@+id/formulario_noticia_botao_cadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cadastrar nova notícia"/>
+
+
+    </LinearLayout>
+</ScrollView>
