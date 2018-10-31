@@ -1,7 +1,8 @@
-package io.github.joaovenancio.aplicacaoconstrutora;
+package io.github.joaovenancio.aplicacaoconstrutora.activitys.ajudantes;
 
 import android.widget.EditText;
 
+import io.github.joaovenancio.aplicacaoconstrutora.R;
 import io.github.joaovenancio.aplicacaoconstrutora.activitys.FormularioNoticiaActivity;
 import io.github.joaovenancio.aplicacaoconstrutora.modelos.Noticia;
 

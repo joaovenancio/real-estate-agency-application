@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import io.github.joaovenancio.aplicacaoconstrutora.AjudanteNoticia;
+import io.github.joaovenancio.aplicacaoconstrutora.activitys.ajudantes.AjudanteNoticia;
 import io.github.joaovenancio.aplicacaoconstrutora.R;
 import io.github.joaovenancio.aplicacaoconstrutora.daos.NoticiaDAO;
 import io.github.joaovenancio.aplicacaoconstrutora.modelos.Noticia;
