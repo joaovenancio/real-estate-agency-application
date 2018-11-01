@@ -33,5 +33,23 @@ public class MenuActivity extends AppCompatActivity {
                 MenuActivity.this.startActivity(verNovaNoticia);
             }
         });
+
+        Button botaoRegistrarImovel = findViewById(R.id.menu_registrar_imovel);
+        botaoRegistrarImovel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent irParaFormularioImovel = new Intent(MenuActivity.this, FormularioImovelActivity.class);
+                MenuActivity.this.startActivity(irParaFormularioImovel);
+            }
+        });
+
+        Button botaoMostrarListaImovel = findViewById(R.id.menu_ver_imoveis);
+        botaoMostrarListaImovel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent verListaImoveis = new Intent(MenuActivity.this, ListaImovelActivity.class);
+                MenuActivity.this.startActivity(verListaImoveis);
+            }
+        });
     }
 }

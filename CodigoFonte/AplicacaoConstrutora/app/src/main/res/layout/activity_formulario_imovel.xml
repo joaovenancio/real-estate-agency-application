@@ -15,13 +15,8 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Texto de descrição da nóticia"
-            android:id="@+id/formulario_imovel_texto"
-            android:inputType="textMultiLine"
-            android:maxLength="2000"
-            android:maxLines="8"
-            android:minLines="4"
-            android:isScrollContainer="true"/>
+            android:hint="Nome do Empreendimento"
+            android:id="@+id/formulario_imovel_nome_empreendimento"/>
 
         <EditText
             android:layout_width="match_parent"
@@ -83,8 +78,20 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Data de hoje"
-            android:id="@+id/formulario_imovel_data"/>
+            android:hint="Latitude Maps"
+            android:id="@+id/formulario_imovel_latitude_maps"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Longitude Maps"
+            android:id="@+id/formulario_imovel_longitude_maps"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Título Maps"
+            android:id="@+id/formulario_imovel_titulo_maps"/>
 
         <Button
             android:id="@+id/formulario_imovel_botao_cadastrar"

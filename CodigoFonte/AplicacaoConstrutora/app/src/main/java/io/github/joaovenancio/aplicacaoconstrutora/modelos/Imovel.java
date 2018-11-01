@@ -3,6 +3,7 @@ package io.github.joaovenancio.aplicacaoconstrutora.modelos;
 public class Imovel {
     //Atributos:
     private Long id;
+    private String nome;
     private double area;
     private int numeroDeQuartos;
     private String endereco;
@@ -19,6 +20,7 @@ public class Imovel {
     //Construtor:
     public Imovel() {
         this.area = 0d;
+        this.nome = "";
         this.numeroDeQuartos = 0;
         this.endereco = "";
         this.cep = "";
@@ -39,6 +41,14 @@ public class Imovel {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public double getArea() {
@@ -135,5 +145,10 @@ public class Imovel {
 
     public void setTituloMaps(String tituloMaps) {
         this.tituloMaps = tituloMaps;
+    }
+
+    @Override
+    public String toString() {
+        return this.getNome() + " | " +this.getValor()+ "R$ | " + this.getNumeroDeQuartos() + " Quartos";
     }
 }

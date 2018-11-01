@@ -18,16 +18,16 @@ public class ImovelDAO extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE imoveis (id INTEGER PRIMARY KEY, numeroDeQuartos INTEGER," +
+        String sql = "CREATE TABLE imoveis (id INTEGER PRIMARY KEY, nome TEXT NOT NULL, numeroDeQuartos INTEGER," +
                 " endereco TEXT NOT NULL, cep TEXT NOT NULL," +
                 "dataDeEntrega TEXT NOT NULL, valor REAL, prazoFinanciamento INTEGER, urlPlanta TEXT, " +
-                "urlVideoYoutube TEXT, latitude REAL, longitude REAL, tituloMaps TEXT)";
+                "urlVideoYoutube TEXT, latitude REAL, longitude REAL, tituloMaps TEXT);";
         db.execSQL(sql);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        String sql = "DROP TABLE IF EXISTS imoveis";
+        String sql = "DROP TABLE IF EXISTS imoveis;";
         db.execSQL(sql);
         onCreate(db);
     }
@@ -36,6 +36,7 @@ public class ImovelDAO extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
 
         ContentValues dados = new ContentValues();
+        dados.put("nome", imovel.getNome());
         dados.put("numeroDeQuartos", imovel.getNumeroDeQuartos());
         dados.put("endereco", imovel.getEndereco());
         dados.put("cep", imovel.getCep());
@@ -48,7 +49,7 @@ public class ImovelDAO extends SQLiteOpenHelper {
         dados.put("longitude", imovel.getLongitude());
         dados.put("tituloMaps", imovel.getTituloMaps());
 
-        db.insert("noticias",null, dados);
+        db.insert("imoveis",null, dados);
     }
 
     public List<Imovel> recuperarImoveis() {
@@ -62,6 +63,7 @@ public class ImovelDAO extends SQLiteOpenHelper {
 
             Imovel imovel = new Imovel();
             imovel.setId(c.getLong(c.getColumnIndex("id")));
+            imovel.setNome(c.getString(c.getColumnIndex("nome")));
             imovel.setNumeroDeQuartos(c.getInt(c.getColumnIndex("numeroDeQuartos")));
             imovel.setEndereco(c.getString(c.getColumnIndex("endereco")));
             imovel.setCep(c.getString(c.getColumnIndex("cep")));

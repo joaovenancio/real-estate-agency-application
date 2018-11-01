@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".activitys.NoticiaActivity" />
         <activity android:name=".activitys.FormularioNoticiaActivity" />
-        <activity android:name=".activitys.FormularioImovelActivity"></activity>
+        <activity android:name=".activitys.FormularioImovelActivity" />
+        <activity android:name=".activitys.ListaImovelActivity"></activity>
     </application>
 
 </manifest>
