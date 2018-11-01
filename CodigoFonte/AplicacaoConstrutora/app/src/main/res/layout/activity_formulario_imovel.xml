@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activitys.FormularioNoticiaActivity">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Texto de descrição da nóticia"
+            android:id="@+id/formulario_imovel_texto"
+            android:inputType="textMultiLine"
+            android:maxLength="2000"
+            android:maxLines="8"
+            android:minLines="4"
+            android:isScrollContainer="true"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Área em M² do empreendimento"
+            android:id="@+id/formulario_imovel_area"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Número de quartos"
+            android:inputType="number"
+            android:id="@+id/formulario_imovel_numero_quartos"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Endereço"
+            android:id="@+id/formulario_imovel_endereco"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="CEP"
+            android:id="@+id/formulario_imovel_cep"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Data de Entrega"
+            android:id="@+id/formulario_imovel_dataDeEntrega"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Valor do Empreendimento"
+            android:inputType="number"
+            android:id="@+id/formulario_imovel_valor"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Prazo do financiamento"
+            android:inputType="number"
+            android:id="@+id/formulario_imovel_prazo_financiamento"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="URL da imagem da Planta"
+            android:id="@+id/formulario_imovel_url_planta"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="URL do ID do video do YouTube"
+            android:id="@+id/formulario_imovel_url_video_youtube"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Data de hoje"
+            android:id="@+id/formulario_imovel_data"/>
+
+        <Button
+            android:id="@+id/formulario_imovel_botao_cadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cadastrar novo Imóvel"/>
+
+
+    </LinearLayout>
+</ScrollView>

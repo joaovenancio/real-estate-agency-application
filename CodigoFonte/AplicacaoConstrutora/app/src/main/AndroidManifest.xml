@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activitys.NoticiaActivity" />
-        <activity android:name=".activitys.FormularioNoticiaActivity"></activity>
+        <activity android:name=".activitys.FormularioNoticiaActivity" />
+        <activity android:name=".activitys.FormularioImovelActivity"></activity>
     </application>
 
 </manifest>
