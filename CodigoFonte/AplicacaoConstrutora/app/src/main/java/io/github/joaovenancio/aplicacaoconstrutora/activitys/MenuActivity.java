@@ -16,6 +16,8 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+
+
         Button botaoRegistrarNoticia = findViewById(R.id.menu_registrar_noticia);
         botaoRegistrarNoticia.setOnClickListener(new View.OnClickListener() {
             @Override

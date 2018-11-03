@@ -4,6 +4,8 @@ import android.graphics.Bitmap;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import io.github.joaovenancio.aplicacaoconstrutora.R;
 import io.github.joaovenancio.aplicacaoconstrutora.activitys.ImovelActivity;
 import io.github.joaovenancio.aplicacaoconstrutora.modelos.Imovel;
@@ -39,6 +41,7 @@ public class AjudanteMostrarImovel {
     //Metodos:
     public void definirConteudo(Imovel imovel) {
         this.campoNome.setText(imovel.getNome());
+        System.out.println(imovel.getArea());
         this.campoArea.setText(String.valueOf((int) imovel.getArea()));
         this.campoNumeroDeQuartos.setText(String.valueOf(imovel.getNumeroDeQuartos()));
         this.campoEndereco.setText(imovel.getEndereco());
@@ -46,6 +49,7 @@ public class AjudanteMostrarImovel {
         this.campoDataDeEntrega.setText(imovel.getDataDeEntrega());
         this.campoValor.setText(String.valueOf((int) imovel.getValor()));
         this.campoPrazoFinanciamento.setText(String.valueOf(imovel.getPrazoFinanciamento()));
+        Picasso.get().load(imovel.getUrlPlanta()).into(this.campoImagemPlanta);
 
     }
 }

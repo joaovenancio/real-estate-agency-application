@@ -48,8 +48,6 @@ public class ListaImovelActivity extends AppCompatActivity {
             }
         });
 
-
-
     }
 
     @Override

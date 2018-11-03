@@ -5,6 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+
+import com.squareup.picasso.MemoryPolicy;
+import com.squareup.picasso.NetworkPolicy;
+import com.squareup.picasso.Picasso;
 
 import io.github.joaovenancio.aplicacaoconstrutora.R;
 import io.github.joaovenancio.aplicacaoconstrutora.activitys.ajudantes.AjudanteMostrarImovel;
@@ -27,6 +32,11 @@ public class ImovelActivity extends AppCompatActivity {
 
         //Mostrar os dados na view:
         this.ajudante.definirConteudo(imovel);
+        //Mostrar a imagem na view:
+        //ImageView imagem = findViewById(R.id.imovel_planta);
+        //Picasso.get().setIndicatorsEnabled(true);
+        //Picasso.get().setLoggingEnabled(true);
+        //Picasso.get().load("http://i.imgur.com/DvpvklR.png").into(imagem);
 
         //Configurar o botao de voltar:
         Button botaoVoltar = findViewById(R.id.imovel_botao_voltar);
