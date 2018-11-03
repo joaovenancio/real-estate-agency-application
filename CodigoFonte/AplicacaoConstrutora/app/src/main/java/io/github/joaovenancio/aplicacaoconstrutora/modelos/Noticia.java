@@ -1,6 +1,8 @@
 package io.github.joaovenancio.aplicacaoconstrutora.modelos;
 
-public class Noticia {
+import java.io.Serializable;
+
+public class Noticia implements Serializable {
     //Atributos:
     private Long id;
     private String texto;

@@ -1,6 +1,8 @@
 package io.github.joaovenancio.aplicacaoconstrutora.modelos;
 
-public class Imovel {
+import java.io.Serializable;
+
+public class Imovel implements Serializable {
     //Atributos:
     private Long id;
     private String nome;
