@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
@@ -15,7 +16,7 @@ import io.github.joaovenancio.aplicacaoconstrutora.R;
 import io.github.joaovenancio.aplicacaoconstrutora.activitys.ajudantes.AjudanteMostrarImovel;
 import io.github.joaovenancio.aplicacaoconstrutora.modelos.Imovel;
 
-public class ImovelActivity extends AppCompatActivity {
+public class ImovelActivity extends YouTubeBaseActivity {
 
     AjudanteMostrarImovel ajudante;
 

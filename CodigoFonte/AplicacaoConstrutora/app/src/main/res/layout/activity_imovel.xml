@@ -57,6 +57,12 @@
             android:layout_height="500px"
             android:layout_width="wrap_content" />
 
+        <com.google.android.youtube.player.YouTubePlayerView
+            android:id="@+id/imovel_player_youtube"
+            android:layout_width="match_parent"
+            android:layout_height="600px">
+        </com.google.android.youtube.player.YouTubePlayerView>
+
         <Button
             android:id="@+id/imovel_botao_voltar"
             android:layout_width="match_parent"
