@@ -13,12 +13,16 @@
         <TextView
             android:id="@+id/noticia_texto"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content" />
+            android:layout_width="wrap_content"
+            android:textSize="32sp"
+            android:layout_gravity="center_horizontal"/>
 
         <TextView
             android:id="@+id/noticia_data"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content" />
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:layout_gravity="end"/>
 
         <Button
             android:id="@+id/noticia_voltar"

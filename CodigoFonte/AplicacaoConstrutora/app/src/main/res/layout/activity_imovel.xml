@@ -12,56 +12,78 @@
         android:orientation="vertical"
         tools:context=".activitys.ImovelActivity">
 
+        <ImageView
+            android:id="@+id/imovel_planta"
+            android:layout_height="500px"
+            android:maxHeight="800px"
+            android:layout_width="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:layout_gravity="center_horizontal"
+            />
+
         <TextView
             android:id="@+id/imovel_nome"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content" />
+            android:layout_width="wrap_content"
+            android:textSize="28sp"
+            android:layout_gravity="center_horizontal"/>
 
         <TextView
             android:id="@+id/imovel_area"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content" />
+            android:layout_width="wrap_content"
+            android:textSize="20sp"/>
 
         <TextView
             android:id="@+id/imovel_numero_quartos"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content" />
-
-        <TextView
-            android:id="@+id/imovel_endereco"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content" />
-
-        <TextView
-            android:id="@+id/imovel_cep"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content" />
+            android:layout_width="wrap_content"
+            android:textSize="20sp"/>
 
         <TextView
             android:id="@+id/imovel_data_entrega"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content" />
+            android:layout_width="wrap_content"
+            android:textSize="20sp"/>
 
         <TextView
             android:id="@+id/imovel_valor"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content" />
+            android:layout_width="wrap_content"
+            android:textSize="20sp"/>
 
         <TextView
             android:id="@+id/imovel_prazo_financiamento"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content" />
+            android:layout_width="wrap_content"
+            android:textSize="20sp"/>
 
-        <ImageView
-            android:id="@+id/imovel_planta"
-            android:layout_height="500px"
-            android:layout_width="wrap_content" />
+        <TextView
+            android:id="@+id/imovel_endereco"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/imovel_cep"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"/>
 
         <com.google.android.youtube.player.YouTubePlayerView
             android:id="@+id/imovel_player_youtube"
             android:layout_width="match_parent"
             android:layout_height="600px">
         </com.google.android.youtube.player.YouTubePlayerView>
+
+        <Button
+            android:id="@+id/imovel_botao_maps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Maps"
+            android:textColor="#ffffff"
+            android:textSize="30sp"/>
 
         <Button
             android:id="@+id/imovel_botao_voltar"

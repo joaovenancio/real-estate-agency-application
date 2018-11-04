@@ -7,21 +7,26 @@
     tools:context=".activitys.MenuActivity">
 
     <RelativeLayout
-        android:layout_width="368dp"
-        android:layout_height="495dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:ignore="MissingConstraints">
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/menu_ver_ultima_noticia"
             android:layout_width="311dp"
             android:layout_height="93dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="30dp"
-            android:layout_marginLeft="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="46dp"
             android:text="Ver última notícia" />
 
@@ -29,11 +34,8 @@
             android:id="@+id/menu_ver_imoveis"
             android:layout_width="311dp"
             android:layout_height="93dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="30dp"
-            android:layout_marginLeft="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="154dp"
             android:text="Ver imóveis" />
 
@@ -41,11 +43,8 @@
             android:id="@+id/menu_registrar_noticia"
             android:layout_width="311dp"
             android:layout_height="93dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="30dp"
-            android:layout_marginLeft="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="259dp"
             android:text="Registrar Notícia" />
 
@@ -53,11 +52,8 @@
             android:id="@+id/menu_registrar_imovel"
             android:layout_width="311dp"
             android:layout_height="93dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="30dp"
-            android:layout_marginLeft="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="369dp"
             android:text="Registrar Imóvel" />
     </RelativeLayout>

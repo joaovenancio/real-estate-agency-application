@@ -49,15 +49,14 @@ public class AjudanteMostrarImovel {
     public void definirConteudo(Imovel imovel) {
 
         this.campoNome.setText(imovel.getNome());
-        System.out.println(imovel.getArea());
-        this.campoArea.setText(String.valueOf((int) imovel.getArea()));
-        this.campoNumeroDeQuartos.setText(String.valueOf(imovel.getNumeroDeQuartos()));
-        this.campoEndereco.setText(imovel.getEndereco());
-        this.campoCep.setText(imovel.getCep());
-        this.campoDataDeEntrega.setText(imovel.getDataDeEntrega());
-        this.campoValor.setText(String.valueOf((int) imovel.getValor()));
-        this.campoPrazoFinanciamento.setText(String.valueOf(imovel.getPrazoFinanciamento()));
-        Picasso.get().load(imovel.getUrlPlanta()).into(this.campoImagemPlanta);
+        this.campoArea.setText("Àrea de " + String.valueOf((int) imovel.getArea()) + "M²");
+        this.campoNumeroDeQuartos.setText("Número de Quartos: " + String.valueOf(imovel.getNumeroDeQuartos()));
+        this.campoEndereco.setText("Localização: " + imovel.getEndereco());
+        this.campoCep.setText("CEP: " + imovel.getCep());
+        this.campoDataDeEntrega.setText("Data de Entrega: " + imovel.getDataDeEntrega());
+        this.campoValor.setText("Investimento: " + String.valueOf((int) imovel.getValor())+ "R$");
+        this.campoPrazoFinanciamento.setText("Prazo de Financiamento: " + String.valueOf(imovel.getPrazoFinanciamento()) + " dias");
+        Picasso.get().load(imovel.getUrlPlanta()).fit().into(this.campoImagemPlanta);
         //Iniciar o video:
         this.onInitializedListener = new YouTubePlayer.OnInitializedListener() {
             @Override
