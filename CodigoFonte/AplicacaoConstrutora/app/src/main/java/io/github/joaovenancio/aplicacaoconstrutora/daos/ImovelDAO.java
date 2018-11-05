@@ -18,11 +18,14 @@ public class ImovelDAO extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE imoveis (id INTEGER PRIMARY KEY, nome TEXT NOT NULL, numeroDeQuartos INTEGER," +
+        String sqlImoveis = "CREATE TABLE imoveis (id INTEGER PRIMARY KEY, nome TEXT NOT NULL, numeroDeQuartos INTEGER," +
                 " area REAL, endereco TEXT NOT NULL, cep TEXT NOT NULL," +
                 "dataDeEntrega TEXT NOT NULL, valor REAL, prazoFinanciamento INTEGER, urlPlanta TEXT, " +
                 "urlVideoYoutube TEXT, latitude REAL, longitude REAL, tituloMaps TEXT);";
-        db.execSQL(sql);
+        String sqlNoticias = "CREATE TABLE noticias (id INTEGER PRIMARY KEY, texto TEXT NOT NULL, data TEXT NOT NULL);";
+
+        db.execSQL(sqlImoveis);
+        db.execSQL(sqlNoticias);
     }
 
     @Override

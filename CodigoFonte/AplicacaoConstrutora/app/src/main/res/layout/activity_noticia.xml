@@ -1,28 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:context=".activitys.NoticiaActivity">
 
-        <TextView
-            android:id="@+id/noticia_texto"
+        <ListView
+            android:id="@+id/lista_noticia"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textSize="32sp"
-            android:layout_gravity="center_horizontal"/>
-
-        <TextView
-            android:id="@+id/noticia_data"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textSize="20sp"
-            android:layout_gravity="end"/>
+            android:layout_weight="1"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@android:drawable/bottom_bar"
+            android:dividerHeight="30dp"
+            android:listSelector="@android:color/transparent"></ListView>
 
         <Button
             android:id="@+id/noticia_voltar"
@@ -33,4 +27,3 @@
             android:textSize="30sp"/>
 
     </LinearLayout>
-</ScrollView>

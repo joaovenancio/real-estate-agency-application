@@ -43,7 +43,6 @@ public class ImovelActivity extends YouTubeBaseActivity {
 
     AjudanteMostrarImovel ajudante;
     Imovel imovel;
-    MapsActivity mapsActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,8 +59,6 @@ public class ImovelActivity extends YouTubeBaseActivity {
         this.ajudante.definirConteudo(imovel);
 
         //Maps:
-        //mapsActivity = new MapsActivity();
-        //mapsActivity.onCreate(savedInstanceState);
         Button botaoMaps = findViewById(R.id.imovel_botao_maps);
         botaoMaps.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -45,5 +45,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng localizacao = new LatLng(this.imovel.getLatitude(), this.imovel.getLongitude());
         mMap.addMarker(new MarkerOptions().position(localizacao).title(this.imovel.getTituloMaps()));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(localizacao));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(localizacao, 15.0f));
     }
 }

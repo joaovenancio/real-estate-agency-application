@@ -3,18 +3,19 @@ package io.github.joaovenancio.aplicacaoconstrutora.activitys;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.List;
 
 import io.github.joaovenancio.aplicacaoconstrutora.R;
+import io.github.joaovenancio.aplicacaoconstrutora.adapters.NoticiaAdapter;
 import io.github.joaovenancio.aplicacaoconstrutora.daos.NoticiaDAO;
 import io.github.joaovenancio.aplicacaoconstrutora.modelos.Noticia;
 
 public class NoticiaActivity extends AppCompatActivity {
+
+    private ListView listaNoticias;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +30,14 @@ public class NoticiaActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        this.listaNoticias = this.findViewById(R.id.lista_noticia);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        this.mostrarUltimaNoticia();
+        this.carregarLista();
     }
 
     private void mostrarUltimaNoticia() {
@@ -47,9 +50,18 @@ public class NoticiaActivity extends AppCompatActivity {
         noticia = noticias.get(noticias.size()-1); //Achar a ultima publicada
 
         //Pegar os campos da view e definir seu conteudo:
-        TextView texto = findViewById(R.id.noticia_texto);
-        texto.setText(noticia.getTexto());
-        TextView data = findViewById(R.id.noticia_data);
-        data.setText(noticia.getData());
+        //TextView texto = findViewById(R.id.noticia_texto);
+        //texto.setText(noticia.getTexto());
+        //TextView data = findViewById(R.id.noticia_data);
+        //data.setText(noticia.getData());
+    }
+
+    private void carregarLista() {
+        NoticiaDAO dao = new NoticiaDAO(this);
+        List<Noticia> noticias = dao.buscaNoticias();
+        dao.close();
+
+        NoticiaAdapter adaptador = new NoticiaAdapter(this, noticias);
+        listaNoticias.setAdapter(adaptador);
     }
 }
