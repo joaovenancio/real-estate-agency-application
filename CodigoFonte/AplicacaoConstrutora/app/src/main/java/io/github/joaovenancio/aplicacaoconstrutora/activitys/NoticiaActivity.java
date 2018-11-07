@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
+import java.util.Collections;
 import java.util.List;
 
 import io.github.joaovenancio.aplicacaoconstrutora.R;
@@ -60,6 +61,7 @@ public class NoticiaActivity extends AppCompatActivity {
         NoticiaDAO dao = new NoticiaDAO(this);
         List<Noticia> noticias = dao.buscaNoticias();
         dao.close();
+        Collections.reverse(noticias); //Reverter a ordem das noticias, para mostrar a ultima adicionada como primeira
 
         NoticiaAdapter adaptador = new NoticiaAdapter(this, noticias);
         listaNoticias.setAdapter(adaptador);
